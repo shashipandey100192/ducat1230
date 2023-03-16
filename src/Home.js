@@ -27,8 +27,15 @@ function Home() {
     </Fragment>
   )
   
-
-
 }
 
 export default Home
+
+export const About1 = ()=>{
+  return(
+    <>
+      <h1>this is name export function</h1>
+    </>
+  )
+
+}
