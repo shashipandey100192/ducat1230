@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home, { About1 } from './Home';
-import Uibootstrap from './Uibootstrap';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Aboutus from './components/Aboutus';
+import Errorpage from './components/Errorpage';
+import Landingpage from './components/Landingpage';
+import Mynav from './components/Mynav';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
-    <About1 />
-    <Uibootstrap />
+    
+      <BrowserRouter>
+      <Mynav></Mynav>
+        <Routes>
+            <Route path='' element={<Landingpage/>}/>
+            <Route path='about' element={<Aboutus/>}/>
+            <Route path='*' element={<Errorpage/>}/>
+        </Routes>
+      
+      </BrowserRouter>
   </React.StrictMode>
 );
 
