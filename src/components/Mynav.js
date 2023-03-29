@@ -19,6 +19,9 @@ function Mynav() {
         <li className="nav-item">
           <Link className="nav-link" to="about">About</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="datalist">Datalist</Link>
+        </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown

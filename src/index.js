@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Aboutus from './components/Aboutus';
 import Errorpage from './components/Errorpage';
 import Landingpage from './components/Landingpage';
+import Mygallery from './components/Mydatalist';
 import Mynav from './components/Mynav';
 
 
@@ -18,6 +19,8 @@ root.render(
             <Route path='' element={<Landingpage/>}/>
             <Route path='about' element={<Aboutus/>}/>
             <Route path='*' element={<Errorpage/>}/>
+            <Route path='datalist' element={<Mygallery/>}/>
+            
         </Routes>
       
       </BrowserRouter>

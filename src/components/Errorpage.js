@@ -3,6 +3,7 @@ import "./style.css";
 
 function Errorpage() {
 const [myvar, myfunc]=useState("hi");
+
 const myinput = (myelement)=>{
   console.log("hello");
   console.log(myelement.target.value);
