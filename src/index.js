@@ -7,6 +7,7 @@ import Errorpage from './components/Errorpage';
 import Landingpage from './components/Landingpage';
 import Mygallery from './components/Mydatalist';
 import Mynav from './components/Mynav';
+import Detailspage  from './components/ProductDetails';
 
 
 
@@ -22,6 +23,7 @@ root.render(
             <Route path='*' element={<Errorpage/>}/>
             <Route path='datalist' element={<Mygallery/>}/>
             <Route path='apidata' element={<Axiosapidatalist/>}/>
+            <Route path='apidata/:id' element={<Detailspage/>}/>
         </Routes>
       
       </BrowserRouter>

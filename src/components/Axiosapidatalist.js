@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Axiosapidatalist() {
 
@@ -42,7 +43,7 @@ const myapifunc = ()=>{
                                     <td width="200">
                                        <button className='btn btn-danger btn-sm'>Delete</button> 
                                        <button className='btn btn-info btn-sm'>Edit</button>
-                                       <button className='btn btn-warning btn-sm'>Update</button>
+                                       <Link className='btn btn-warning btn-sm' to={`${x.id}`}>View</Link>
                                     </td>
                                 </tr>
                                 )   
