@@ -8,6 +8,7 @@ import Landingpage from './components/Landingpage';
 import Mygallery from './components/Mydatalist';
 import Mynav from './components/Mynav';
 import Detailspage  from './components/ProductDetails';
+import Mybootstrapform from './components/Mybootstrapform';
 
 
 
@@ -24,6 +25,7 @@ root.render(
             <Route path='datalist' element={<Mygallery/>}/>
             <Route path='apidata' element={<Axiosapidatalist/>}/>
             <Route path='apidata/:id' element={<Detailspage/>}/>
+            <Route path="myform" element={<Mybootstrapform/>}/>
         </Routes>
       
       </BrowserRouter>
