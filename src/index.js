@@ -9,6 +9,8 @@ import Mygallery from './components/Mydatalist';
 import Mynav from './components/Mynav';
 import Detailspage  from './components/ProductDetails';
 import Mybootstrapform from './components/Mybootstrapform';
+import Mychart from './components/Mychart';
+import Parents from './components/Parents';
 
 
 
@@ -26,6 +28,9 @@ root.render(
             <Route path='apidata' element={<Axiosapidatalist/>}/>
             <Route path='apidata/:id' element={<Detailspage/>}/>
             <Route path="myform" element={<Mybootstrapform/>}/>
+            <Route path="mychart" element={<Mychart/>}/>
+            <Route path="myprops" element={<Parents/>}/>
+            
         </Routes>
       
       </BrowserRouter>
