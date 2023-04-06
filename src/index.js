@@ -11,17 +11,25 @@ import Detailspage  from './components/ProductDetails';
 import Mybootstrapform from './components/Mybootstrapform';
 import Mychart from './components/Mychart';
 import Parents from './components/Parents';
-
+import LoginButton from './components/Myloginpage';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
+      <Auth0Provider
+    domain="dev-2lztdozl12hbrfpe.us.auth0.com"
+    clientId="9g8CirzgnelIWvTyd46cL5TrI98DFcme"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
       <BrowserRouter>
       <Mynav></Mynav>
         <Routes>
-            <Route path='' element={<Landingpage/>}/>
+            {/* <Route path='' element={<Landingpage/>}/> */}
+             <Route path='' element={<LoginButton/>}/>
             <Route path='about' element={<Aboutus/>}/>
             <Route path='*' element={<Errorpage/>}/>
             <Route path='datalist' element={<Mygallery/>}/>
@@ -34,6 +42,7 @@ root.render(
         </Routes>
       
       </BrowserRouter>
+      </Auth0Provider>
   </React.StrictMode>
 );
 
