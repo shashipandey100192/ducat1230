@@ -13,6 +13,7 @@ import Mychart from './components/Mychart';
 import Parents from './components/Parents';
 import LoginButton from './components/Myloginpage';
 import { Auth0Provider } from "@auth0/auth0-react";
+import Firstpage from './doutes/Firstpage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +39,7 @@ root.render(
             <Route path="myform" element={<Mybootstrapform/>}/>
             <Route path="mychart" element={<Mychart/>}/>
             <Route path="myprops" element={<Parents/>}/>
+            <Route path='mydoute' element={<Firstpage/>}/>
             
         </Routes>
       
