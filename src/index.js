@@ -14,11 +14,15 @@ import Parents from './components/Parents';
 import LoginButton from './components/Myloginpage';
 import { Auth0Provider } from "@auth0/auth0-react";
 import Firstpage from './doutes/Firstpage';
+import Reduxlandingpage from './redux/Reduxlandingpage';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
       <Auth0Provider
     domain="dev-2lztdozl12hbrfpe.us.auth0.com"
     clientId="9g8CirzgnelIWvTyd46cL5TrI98DFcme"
@@ -40,11 +44,14 @@ root.render(
             <Route path="mychart" element={<Mychart/>}/>
             <Route path="myprops" element={<Parents/>}/>
             <Route path='mydoute' element={<Firstpage/>}/>
+            <Route path='myredux' element={<Reduxlandingpage/>}/>
+            
             
         </Routes>
       
       </BrowserRouter>
       </Auth0Provider>
+      </Provider>
   </React.StrictMode>
 );
 
